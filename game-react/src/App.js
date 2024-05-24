@@ -1,11 +1,13 @@
 import './App.css';
 
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from 'react-router-dom'
+
 import MainGame from './Components/MainGame';
 import MiniGame from './Components/MiniGame';
 import Characters from './Components/Characters';
@@ -14,9 +16,10 @@ function App() {
   
   return ( 
     <>
+
     <Router>
       <div>
-        <nav>
+        <nav class="flex outline outline-offset-2 outline-blue-500">
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -47,7 +50,7 @@ function App() {
       </Switch>
     </div>
     </Router>
-
+    
     </>
     
   );
