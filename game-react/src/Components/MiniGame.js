@@ -2,7 +2,7 @@ import React from 'react'
 
 function MiniGame() {
   return (
-    <div>MiniGame</div>
+    <div>MiniGame goes here</div>
   )
 }
 
