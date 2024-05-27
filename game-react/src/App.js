@@ -8,17 +8,18 @@ import {
 } from 'react-router-dom'
 
 import NavBar from './Components/NavBar';
-import MainGame from './Components/MainGame';
+import Index from './Components/Index'
+import MainGame from './Components/MainGame/MainGame';
 import MiniGame from './Components/MiniGame';
 import Characters from './Components/Characters';
 import Shop from './Components/Shop'
 
 // Importing game levels for routing
-import Level1 from './Components/Level1';
-import Level2 from './Components/Level2';
-import Level3 from './Components/Level3';
-import Level4 from './Components/Level4';
-import Level5 from './Components/Level5';
+import Level1 from './Components/MainGame/GameLevels/Level1';
+import Level2 from './Components/MainGame/GameLevels/Level2';
+import Level3 from './Components/MainGame/GameLevels/Level3';
+import Level4 from './Components/MainGame/GameLevels/Level4';
+import Level5 from './Components/MainGame/GameLevels/Level5';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
     {/* Router to redirect user to the components once clicked on navbar */}
     <Router>
       <Switch>
+        <Route path="/home">
+          <Index />
+        </Route>
         <Route path="/game">
           <MainGame />
         </Route>
@@ -61,8 +65,9 @@ function App() {
         </Route>
       </Switch>
     </Router>
+
     </>
-    
+
   );
 }
 

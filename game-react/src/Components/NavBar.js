@@ -9,9 +9,9 @@ function NavBar() {
   return (
     <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/">Don't Starve</Navbar.Brand>
+          <Navbar.Brand>Don't Starve</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/characters">Characters</Nav.Link>
             <Nav.Link href="/game">iSpy</Nav.Link>
             <Nav.Link href="/minigame">Crockpot</Nav.Link>
