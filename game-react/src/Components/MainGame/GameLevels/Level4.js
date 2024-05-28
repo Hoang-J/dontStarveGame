@@ -19,7 +19,7 @@ function Level4() {
     <>
       <div>Level 4</div>
       <div className="spider-forest"></div>
-      <div className="item4" onClick={handleShow}>TEST</div>
+      <div className="item4" onClick={handleShow}></div>
 
       <Modal
       show={show}

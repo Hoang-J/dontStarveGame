@@ -19,7 +19,7 @@ function Level2() {
     <>
       <div>Level 2</div>
       <div className="glommer"></div>
-      <div onClick={handleShow} className="item2">TEST2</div>
+      <div onClick={handleShow} className="item2"></div>
 
       <Modal
       show={show}

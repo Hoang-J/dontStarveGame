@@ -64,63 +64,46 @@
 /* The different locations of the hidden items for each level */
 
 .item1 {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 5%;
+    /* border: 2px solid red; */
+    width: 2%;
     height: 30px;
-    position: relative;
-    left: 80%;
-    bottom: 400px;
-    color: aliceblue;
-
-
-    
+    position: absolute;
+    left: 95.5%;
+    bottom: 71%;    
 }
 
 .item2 {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 5%;
-    height: 30px;
-    position: relative;
-    left: 10%;
-    bottom: 300px;
-    color: aliceblue;
-
+    /* border: 2px solid red; */
+    width: 1%;
+    height: 20px;
+    position: absolute;
+    left: 61.4%;
+    bottom: 76%;
 }
 
 .item3 {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 5%;
+    /* border: 2px solid red; */
+    width: 3%;
     height: 30px;
-    position: relative;
-    left: 10%;
-    bottom: 300px;
-    color: aliceblue;
-
+    position: absolute;
+    left: 6%;
+    bottom: 36.4%;
 }
 
 .item4 {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 5%;
+    /* border: 2px solid red; */
+    width: 2%;
     height: 30px;
-    position: relative;
-    left: 10%;
-    bottom: 300px;
-    color: aliceblue;
-
+    position: absolute;
+    left: 51.3%;
+    bottom: 74%;
 }
 
 .item5 {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 5%;
-    height: 30px;
-    position: relative;
-    left: 10%;
-    bottom: 300px;
-    color: aliceblue;
-
+    /* border: 2px solid red; */
+    width: 2%;
+    height: 6%;
+    position: absolute;
+    left: 46.7%;
+    bottom: 54%;
 }

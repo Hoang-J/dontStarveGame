@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 
+
 function Level1() {
 
   const [show, setShow] = useState(false)
@@ -23,7 +24,7 @@ function Level1() {
   return (
     <>
         <div className="field"></div>
-        <div onClick={handleShow} className="item1">TEST</div>
+        <div onClick={handleShow} className="item1"></div>
 
         <Modal
           show={show}

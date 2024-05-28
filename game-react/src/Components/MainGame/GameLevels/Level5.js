@@ -19,7 +19,7 @@ function Level5() {
     <>
       <div>Level 5</div>
       <div className="swamp"></div>
-      <div className="item5" onClick={handleShow}>TEST</div>
+      <div className="item5" onClick={handleShow}></div>
 
       <Modal
       show={show}

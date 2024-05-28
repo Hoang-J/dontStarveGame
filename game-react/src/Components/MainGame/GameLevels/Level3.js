@@ -20,7 +20,7 @@ function Level3() {
     <>
       <div>Level 3</div>
       <div className="snowy-trees"></div>
-      <div className="item3" onClick={handleShow}>TEST</div>
+      <div className="item3" onClick={handleShow}></div>
 
       <Modal
       show={show}
