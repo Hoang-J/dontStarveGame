@@ -1,8 +1,8 @@
-import React, { useState, useEffect, createContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './Characters.css'
-import MiniGame from './MiniGame'
+// import { NameContext } from './Home'
 
-export const Maxwell = createContext();
+
 
 function Characters() {
 
@@ -22,7 +22,9 @@ function Characters() {
     </ul>
   )
 
-  
+  // const name = useContext(NameContext);
+
+
   useEffect(() => {
     fetch('https://dont-starve-together-api.xyz/api/survivors')
     .then(response => (response.json()))
@@ -37,11 +39,7 @@ function Characters() {
       <div className="test">
       {listItems}
       </div>
-      {/* <button>
-        <Maxwell.Provider value={"test"}>
-          <MiniGame />
-        </Maxwell.Provider>
-      </button> */}
+      {/* <div>Hi, {name}</div> */}
       
     </>
     
