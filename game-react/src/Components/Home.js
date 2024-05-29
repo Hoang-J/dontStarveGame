@@ -1,9 +1,11 @@
 import React, { useState, createContext } from 'react'
 import Greeting1 from './Greeting1'
-import NavBar from './NavBar'
 import Modal from 'react-bootstrap/Modal'
+import LogIn from './LogIn'
 
 export const NameContext = createContext()
+
+// export const ChangeNameContext = createContext()
 
 function Home() {
 
@@ -12,7 +14,13 @@ function Home() {
   const [show, setShow] = useState(true)
 
   function handleClose() {
-    setShow(() => false)
+    if(name.length > 0){
+      setShow(false)
+      // console.log(name)
+    } else {
+      alert("Please Enter your Name!")
+    }
+    
   }
 
   // function handleShow() {
@@ -26,7 +34,6 @@ function Home() {
   function handleSubmit(e) {
     e.preventDefault()
     setSubmittedName(name)
-    setName('')
   }
 
   function clearInput() {
@@ -58,21 +65,28 @@ function Home() {
           name="name"
           value={name}
           onChange={handleInputChange}
+          required
           >
 
           </input> 
-          </form>
-        </Modal.Body>
         <Modal.Footer>
           <button type="submit" onClick={handleClose}>Confirm</button>
           <button onClick={clearInput}>Clear</button>
         </Modal.Footer>
+          </form>
+        </Modal.Body>
 
       </Modal>
-
+      {submittedName && 
       <NameContext.Provider value={submittedName}>
-        <NavBar />
+        
+          <LogIn />
+        
+        {/* <Greeting1 /> */}
       </NameContext.Provider>
+      
+      }
+      
 
       {/* <h2>Hello there, what's your name?</h2>
       <form onSubmit={handleSubmit}>

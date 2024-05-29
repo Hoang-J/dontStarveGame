@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NameContext } from './Home'
 import Button from 'react-bootstrap/esm/Button';
-import Greeting1 from './Greeting1';
+
 
 
 function NavBar() {
@@ -25,18 +25,17 @@ function NavBar() {
             <Nav.Link href="/minigame">Crockpot</Nav.Link>
             <Nav.Link href="/shop">Shop</Nav.Link>
           </Nav>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          {/* <Navbar.Toggle /> */}
+          {/* <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
               Signed in as: <span>{name}</span>
             </Navbar.Text>
             <Button>Log Out</Button>
-          </Navbar.Collapse>
-          
+          </Navbar.Collapse> */}
         </Container>
       </Navbar>
 
-      <Greeting1 />
+      
     </>
     
 
