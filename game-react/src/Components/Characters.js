@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createContext } from 'react'
 import './Characters.css'
+import MiniGame from './MiniGame'
+
+export const Maxwell = createContext();
 
 function Characters() {
 
   const [charList, setCharList] = useState([])
-  const listItems = charList.map(char => 
+  // Mapping through the API array to get each character's name, nickname, and portrait
+  // The image for the last survivor wasn't working so had to use slice to return back only 14 survivors (15 total characters)
+  // Slice is using index values that's why its 0-13
+  const listItems = charList.slice(0, 13).map(char => 
     <ul key={char.id}>
       <img
       src={char.portrait}
@@ -14,39 +20,29 @@ function Characters() {
         <p>{char.name}</p>
       </p>
     </ul>
-  // <>
-
-    // {/* <div className='char-div'> {char.nickname}: {char.name} <img className="image" src={char.portrait}></img></div> */}
-    
-  // {/* </> */}
-  
-
   )
+
   
-
-
   useEffect(() => {
     fetch('https://dont-starve-together-api.xyz/api/survivors')
     .then(response => (response.json()))
     .then(data => {
-      // list = data
       setCharList(data)
-      // console.log(list)
     })
     
   }, [])
-
   
-// console.log("outside of effect", list)
-// charCard.set('name', charList[0].name)
-// console.log(charCard.get('name'))
-
   return (
-    <>
-      <div>Characters</div>
+    <> 
       <div className="test">
       {listItems}
       </div>
+      {/* <button>
+        <Maxwell.Provider value={"test"}>
+          <MiniGame />
+        </Maxwell.Provider>
+      </button> */}
+      
     </>
     
   )

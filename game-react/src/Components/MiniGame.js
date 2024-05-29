@@ -1,35 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './MiniGame.css'
+// import { Maxwell } from './Characters'
+
 
 function MiniGame() {
 
-  const [recipeList, setRecipeList] = useState('')
-  const [cooking, setCooking] = useState('')
+  const [recipeList, setRecipeList] = useState([])
+  const [cooking, setCooking] = useState([])
+  // const maxwellContext = useContext(Maxwell)
+  
 
   useEffect(() => {
-    fetch('https://dont-starve-together-api.xyz/api/crockpot-recipes?page=2')
+    fetch('https://dont-starve-together-api.xyz/api/crockpot-recipes?page=1')
     .then(response => (response.json()))
     .then(data => {
       setRecipeList(data)
+      // console.log(data.results[0].name)
     })
   }, [])
 
 
+  // console.log(recipeList.results[0].name)
 
-  // function handleClick() {
-  //   setCooking()
-  // }
-  // console.log(recipeList.results)
   return (
     
     <>
       <div>MiniGame goes here</div>
-      <div className="ingredients-container">
-        <div className="ingredients">1</div>
-        <div className="ingredients">2</div>
-        <div className="ingredients">3</div>
-        <div className="ingredients">4</div>
-      </div>
+      {/* <p>{maxwellContext}</p> */}
       
     </>
   )

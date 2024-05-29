@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom'
 
 import NavBar from './Components/NavBar';
-import Index from './Components/Index'
+import Home from './Components/Home';
 import MainGame from './Components/MainGame/MainGame';
 import MiniGame from './Components/MiniGame';
 import Characters from './Components/Characters';
@@ -32,7 +32,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/home">
-          <Index />
+          <Home />
         </Route>
         <Route path="/game">
           <MainGame />
