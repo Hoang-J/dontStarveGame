@@ -26,9 +26,10 @@ function App() {
   return ( 
     <>
     {/* NavBar component that is linked to the router below to redirect to different components */}
-    <NavBar />
+    
     {/* Router to redirect user to the components once clicked on navbar */}
     <Router>
+    <NavBar />
       <Switch>
         <Route path="/home">
           <Home />

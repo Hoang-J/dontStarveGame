@@ -1,15 +1,25 @@
-.food-container {
+
+.body {
+    background-image: url("../../MapBackgrounds/green-curtain.jpeg");
+}
+
+.Recipe-List {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    list-style-type: none;
+    
 }
 
 .food-cards {
-    border: 2px solid red;
-    padding: 5%;
-    margin: 1%;
-    margin-left: 1.5%;
-    width: 20%;   
+
+    
+}
+
+.food-item {
+    padding-left: 30%;
+    width: 70%;   
+    height: 70%;
 }
 
 .food-descriptions {
