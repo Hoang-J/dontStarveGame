@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import { SubmittedNameContext } from './Home'
+import { SubmittedNameContext } from './LoginScreen'
 import { isFormUpContext } from './LogIn'
 import TypeWriter from '../TypeWriter'
+import { useHistory } from "react-router-dom"
 
 
 function GreetExit() {
@@ -10,10 +11,11 @@ function GreetExit() {
     const [submittedName, setSubmittedName] = useContext(SubmittedNameContext)
     const [isFormUp, setIsFormUp] = useContext(isFormUpContext)
     
-    function loggingOff(e) {
-      setSubmittedName('')
-      e.preventDefault()
-      window.location.reload()
+    const history = useHistory()
+
+    function loggingOff() {
+      setSubmittedName('');
+      history.push("/home")
     }
     
   return (

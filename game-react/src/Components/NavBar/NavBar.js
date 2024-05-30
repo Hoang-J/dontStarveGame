@@ -13,9 +13,10 @@ function NavBar() {
           <Navbar.Brand>Don't Starve</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/login">Log In</Nav.Link>
             <Nav.Link href="/characters">Characters</Nav.Link>
             <Nav.Link href="/game">iSpy</Nav.Link>
-            <Nav.Link href="/minigame">Crockpot</Nav.Link>
+            <Nav.Link href="/food-recipes">Crockpot</Nav.Link>
             <Nav.Link href="/shop">Shop</Nav.Link>
           </Nav>
         </Container>

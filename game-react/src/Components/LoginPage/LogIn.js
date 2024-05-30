@@ -1,5 +1,5 @@
 import React, { useContext, createContext, useState } from 'react'
-import { NameContext, SubmittedNameContext } from './Home'
+import { NameContext, SubmittedNameContext } from './LoginScreen'
 import GreetExit from './GreetExit'
 
 export const isFormUpContext = createContext()

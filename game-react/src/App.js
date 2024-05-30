@@ -7,8 +7,9 @@ import {
 // Importing the different components to send users to which location when its respective path is clicked
 import NavBar from './Components/NavBar/NavBar'
 import Home from './Components/HomePage/Home'
+import LoginScreen from './Components/LoginPage/LoginScreen'
 import MainGame from './Components/MainGame/MainGame'
-import MiniGame from './Components/CrockpotRecipe/MiniGame'
+import FoodRecipes from './Components/CrockpotRecipe/FoodRecipes'
 import Characters from './Components/Characters/Characters'
 import Shop from './Components/Shop/Shop'
 
@@ -32,11 +33,14 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
+        <Route path="/login">
+          <LoginScreen />
+        </Route>
         <Route path="/game">
           <MainGame />
         </Route>
-        <Route path="/minigame">
-          <MiniGame />
+        <Route path="/food-recipes">
+          <FoodRecipes />
         </Route>
         <Route path="/characters">
           <Characters />
