@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import './FoodRecipes.css'
 // import { Maxwell } from './Characters'
 
@@ -8,12 +8,12 @@ function FoodRecipes() {
   const [recipeList, setRecipeList] = useState([])
   // const [cooking, setCooking] = useState([])
   // const maxwellContext = useContext(Maxwell)
-  const listItems = recipeList.map(char => 
-    <ul className="food-cards" key={char.id}>
-      <img src={char.asset}/>
+  const listItems = recipeList.map(food => 
+    <ul className="food-cards" key={food.id}>
+      <img src={food.asset}/>
       <p className="food-descriptions">
-        <b>{char.name}</b>
-        <p>{char.type}</p>
+        <b>{food.name}</b>
+        <p>{food.type}</p>
       </p>
     </ul>
   )
