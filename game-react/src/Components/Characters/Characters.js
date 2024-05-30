@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Characters.css'
-// import { NameContext } from './Home'
-
-
 
 function Characters() {
 
@@ -12,9 +9,7 @@ function Characters() {
   // Slice is using index values that's why its 0-13
   const listItems = charList.slice(0, 17).map(char => 
     <ul key={char.id}>
-      <img
-      src={char.portrait}
-      />
+      <img src={char.portrait}/>
       <p>
         <b>{char.nickname}</b>
         <p>{char.name}</p>
@@ -22,25 +17,22 @@ function Characters() {
     </ul>
   )
 
-  // const name = useContext(NameContext);
-
-
   useEffect(() => {
     fetch('https://dont-starve-together-api.xyz/api/survivors')
     .then(response => (response.json()))
     .then(data => {
+      // Updating the char list state with the data to make the data
+      // a global variable to use
       setCharList(data)
     })
-    
+  // Putting [] to make sure useEffect is not constantly running, will run one time and thats it
   }, [])
   
   return (
     <> 
-      <div className="test">
-      {listItems}
+      <div className="char-container">
+        {listItems}
       </div>
-      {/* <div>Hi, {name}</div> */}
-      
     </>
     
   )

@@ -10,7 +10,7 @@ function TypeWriter({text}) {
            setTimeout(() => {
                setCurrentText(previousTextChar => previousTextChar + text[currentIndex])
                setCurrentIndex(previousCharIndex => previousCharIndex + 1)
-            }, 200) 
+            }, 100) 
            
         }
     }, [currentIndex, text])

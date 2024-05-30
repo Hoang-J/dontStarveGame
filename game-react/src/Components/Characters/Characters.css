@@ -1,0 +1,10 @@
+.char-container {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
+}
+

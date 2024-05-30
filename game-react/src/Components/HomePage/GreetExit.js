@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { SubmittedNameContext } from './Home'
 import { isFormUpContext } from './LogIn'
-import TypeWriter from './TypeWriter'
+import TypeWriter from '../TypeWriter'
 
 
-function Greeting1() {
+function GreetExit() {
 
     
     const [submittedName, setSubmittedName] = useContext(SubmittedNameContext)
@@ -37,4 +37,4 @@ function Greeting1() {
   )
 }
 
-export default Greeting1
+export default GreetExit

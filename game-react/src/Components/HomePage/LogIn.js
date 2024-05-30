@@ -1,13 +1,10 @@
 import React, { useContext, createContext, useState } from 'react'
 import { NameContext, SubmittedNameContext } from './Home'
-import LogOut from './LogOut'
-import Greeting1 from './Greeting1'
+import GreetExit from './GreetExit'
 
 export const isFormUpContext = createContext()
 
 function LogIn() {
-
-  // const name = useContext(NameContext)
 
   const [submittedName, setSubmittedName] = useContext(SubmittedNameContext)
   const [name, setName] = useContext(NameContext)
@@ -59,7 +56,7 @@ function LogIn() {
         }
         
         <isFormUpContext.Provider value={[isFormUp, setIsFormUp]}>
-          <Greeting1 />
+          <GreetExit />
         </isFormUpContext.Provider>
         
     </>

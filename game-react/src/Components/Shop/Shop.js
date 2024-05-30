@@ -4,6 +4,8 @@ import "./Shop.css"
 function Shop() {
   return (
     <>
+      {/* These code for the button was provided on the Stripe website */}
+      
       {/* Wilson */}
       <stripe-buy-button
       buy-button-id="buy_btn_1PLUXJ2NegYeTfbF2PvX5YC3"

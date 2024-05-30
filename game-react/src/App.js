@@ -1,25 +1,23 @@
-import './App.css';
-
-
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
 
-import NavBar from './Components/NavBar';
-import Home from './Components/Home';
-import MainGame from './Components/MainGame/MainGame';
-import MiniGame from './Components/MiniGame';
-import Characters from './Components/Characters';
-import Shop from './Components/Shop'
+// Importing the different components to send users to which location when its respective path is clicked
+import NavBar from './Components/NavBar/NavBar'
+import Home from './Components/HomePage/Home'
+import MainGame from './Components/MainGame/MainGame'
+import MiniGame from './Components/CrockpotRecipe/MiniGame'
+import Characters from './Components/Characters/Characters'
+import Shop from './Components/Shop/Shop'
 
 // Importing game levels for routing
-import Level1 from './Components/MainGame/GameLevels/Level1';
-import Level2 from './Components/MainGame/GameLevels/Level2';
-import Level3 from './Components/MainGame/GameLevels/Level3';
-import Level4 from './Components/MainGame/GameLevels/Level4';
-import Level5 from './Components/MainGame/GameLevels/Level5';
+import Level1 from './Components/MainGame/GameLevels/Level1'
+import Level2 from './Components/MainGame/GameLevels/Level2'
+import Level3 from './Components/MainGame/GameLevels/Level3'
+import Level4 from './Components/MainGame/GameLevels/Level4'
+import Level5 from './Components/MainGame/GameLevels/Level5'
 
 
 function App() {

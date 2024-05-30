@@ -3,10 +3,6 @@ import "./Levels.css"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-
-
-
-
 function Level1() {
 
   const [show, setShow] = useState(false)
