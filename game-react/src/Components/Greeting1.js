@@ -1,45 +1,33 @@
 import React, { useContext } from 'react'
-import { NameContext } from './Home'
+import { SubmittedNameContext } from './Home'
+import { isFormUpContext } from './LogIn'
 import TypeWriter from './TypeWriter'
 
 
 function Greeting1() {
-    const name = useContext(NameContext)
-    // const [changeName, setChangeName] = useState('')
 
-    // function handleNameChange() {
-      
-    // }
-
-    // function handleNameChange(e) {
-    //   setName(e.target.value)
-    // }
     
-
+    const [submittedName, setSubmittedName] = useContext(SubmittedNameContext)
+    const [isFormUp, setIsFormUp] = useContext(isFormUpContext)
+    
+    function loggingOff(e) {
+      setSubmittedName('')
+      e.preventDefault()
+      window.location.reload()
+    }
+    
   return (
     <>
-    {/* <div>This is my Greeting to you, {name}</div */}
         <div>
-            {name && (
+            {!isFormUp && (
             <div>
-              <h2>Welcome <TypeWriter text={name}/></h2>
-              <h2>Please Confirm your name</h2>
-              {/* <input 
-              type="text"
-              name="name"
-              value={changeName}
-              onChange={setName(handleNameChange())}
-              onKeyUp={(e) => {
-                if(e.key === "Enter") {
-                  handleNameChange()
-                } 
-              }}
-              >
-            </input> */}
+              <h2>Welcome <TypeWriter text={submittedName}/></h2>
+              <TypeWriter text={"This is Don't Starve."}/>
+              
             </div>
-            
             )}
-          
+
+          <button onClick={loggingOff}>Log Off</button>
         
         </div>
         

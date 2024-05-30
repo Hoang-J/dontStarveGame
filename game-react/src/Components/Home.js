@@ -5,7 +5,8 @@ import LogIn from './LogIn'
 
 export const NameContext = createContext()
 
-// export const ChangeNameContext = createContext()
+export const SubmittedNameContext = createContext()
+
 
 function Home() {
 
@@ -22,10 +23,6 @@ function Home() {
     }
     
   }
-
-  // function handleShow() {
-  //   setShow(() => true) 
-  // }
 
   function handleInputChange(e) {
     setName(e.target.value)
@@ -77,43 +74,16 @@ function Home() {
         </Modal.Body>
 
       </Modal>
+
       {submittedName && 
-      <NameContext.Provider value={submittedName}>
-        
+      <SubmittedNameContext.Provider value={[submittedName, setSubmittedName]}>
+        <NameContext.Provider value={[name, setName]}>
           <LogIn />
-        
+        </NameContext.Provider>
         {/* <Greeting1 /> */}
-      </NameContext.Provider>
+      </SubmittedNameContext.Provider>
       
       }
-      
-
-      {/* <h2>Hello there, what's your name?</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Name: </label>
-        <input
-        type="text"
-        name="name"
-        value={name}
-        onChange={handleInputChange}
-        >
-
-        </input> 
-
-        <button type="submit">Confirm</button>
-        <button onClick={clearInput}>Clear</button>
-      </form> */}
-      
-      {/* <div>
-        {submittedName && (
-        <h2>Welcome <TypeWriter text={submittedName}/></h2> 
-        )}
-        
-      </div> */}
-        {/* can I code it where the value from this component will be stored to use at a different route or route will always rerender and erase? */}
-      {/* <NameContext.Provider value={submittedName}/> */}
-
-      
 
     </>
 
