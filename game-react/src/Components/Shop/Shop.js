@@ -4,7 +4,7 @@ import "./Shop.css"
 function Shop() {
   return (
     <>
-      <div className="main"></div>
+     
       <div className="shop-container">
 
         {/* These code are for the button which was provided on the Stripe website */}
@@ -36,15 +36,8 @@ function Shop() {
         >
         </stripe-buy-button>
 
-        {/* Hot Dragon Chili Salad */}
-        <stripe-buy-button
-        buy-button-id="buy_btn_1PMMju2NegYeTfbFty286feB"
-        publishable-key="pk_test_51PLFek2NegYeTfbF80e5GERAmZOxeJjguiGpTeGsdFs2lcY4VjqGGXcdnXpiTtdx4MitNuZjq7JkYNlrHyZcEMpP00QdrBFr9X"
-        >
-        </stripe-buy-button>
-
       </div>
-      
+       <div className="main"></div>
 
     </>
     

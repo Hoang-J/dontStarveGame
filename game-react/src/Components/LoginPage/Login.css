@@ -57,7 +57,7 @@ input[type=text]:focus {
 
 .continue-button {
     position: absolute;
-    top: 200%;
+    top: 180%;
     left: 35%;
     width: 30%;
     font-size: 30px;
@@ -75,16 +75,16 @@ input[type=text]:focus {
 
 .log-off-button {
     position: absolute;
-    top: 224.5%;
+    top: 200%;
     left: 15%;
-    width: 30%;
+    width: 40%;
     font-size: 30px;
 }
 
 .login-char {
     position: absolute;
     left: 71%;
-    top: 23%;
+    top: 35%;
     width: 40%;
     height: 100%;
     z-index: 1;

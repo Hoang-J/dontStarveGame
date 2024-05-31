@@ -8,10 +8,10 @@
 
 .Recipe-List {
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 5%;
     width: 90%;
-    height: 50%;
+    height: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,8 +21,8 @@
 
 /* changing the size of the food images */
 .food-item {
-    width: 30%;   
-    height: 58%;
+    width: 25%;   
+    height: 45%;
 }
 
 /* making the food name and type in the center */

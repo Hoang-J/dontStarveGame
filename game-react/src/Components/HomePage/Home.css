@@ -48,7 +48,7 @@
     height: 30%;
     /* Crop gif into a circle to get rid of some white space */
     clip-path: circle(40%);
-    bottom: 15%;
+    bottom: 17%;
     left: 7.5%;
     animation: backAndForth 14s linear infinite;
 }
@@ -71,7 +71,7 @@
 
   .art-credit {
     position: absolute;
-    left: 35%;
+    left: 30%;
     top: 53%;
     color: rgb(104, 101, 101);
     font-size: 14px;
