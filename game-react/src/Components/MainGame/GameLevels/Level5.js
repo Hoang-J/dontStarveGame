@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import './Levels.css'
+import wendy from '../../../Images/wendy-abigal2.gif'
 
 function Level5() {
 
@@ -17,9 +18,10 @@ function Level5() {
 
   return (
     <>
-      <div>Level 5</div>
       <div className="swamp"></div>
       <div className="item5" onClick={handleShow}></div>
+      <img className="game-char" src={wendy}></img>
+      <div className="game-riddle">I love being the center of attention.</div>
 
       <Modal
       show={show}
@@ -31,14 +33,14 @@ function Level5() {
           <Modal.Title>You found them all!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I knew you could do it! That's all from this game. Thanks for playing!
+          I knew you could do it! Thanks for playing!
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary" href="/home">Home</Button>
+          <Button variant="secondary" href="/home">Home</Button>
         </Modal.Footer>
       </Modal>
-      <Button variant="primary" href='/game'>Main Menu</Button>
+      <Button className="map-button" variant="secondary" href='/game'>Main Menu</Button>
     </>
   )
 }

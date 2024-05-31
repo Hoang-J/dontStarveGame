@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 import './Levels.css'
+import webber from '../../../Images/webbers.gif'
 
 function Level4() {
 
@@ -17,9 +18,10 @@ function Level4() {
 
   return (
     <>
-      <div>Level 4</div>
       <div className="spider-forest"></div>
       <div className="item4" onClick={handleShow}></div>
+      <img className="game-char" src={webber}></img>
+      <div className="game-riddle">I'm going to stay beautiful even in this unoptimal environment.</div>
 
       <Modal
       show={show}
@@ -31,14 +33,14 @@ function Level4() {
           <Modal.Title>You're Too Good!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          The next one is the last level. Think you can do it?
+          The next one is the last map. Think you can do it?
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary" href="/level5">Next Level</Button>
+          <Button variant="secondary" href="/level5">Next Map</Button>
         </Modal.Footer>
       </Modal>
-      <Button variant="primary" href='/game'>Select Level</Button>
+      <Button className="map-button" variant="secondary" href='/game'>Select Level</Button>
     </>
   )
 }

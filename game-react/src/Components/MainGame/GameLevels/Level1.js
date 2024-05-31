@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import "./Levels.css"
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import wormwoods from '../../../Images/wormwoods.gif'
 
 function Level1() {
 
@@ -15,12 +16,12 @@ function Level1() {
     setShow(() => true)
   }
 
-
-
   return (
     <>
         <div className="field"></div>
         <div onClick={handleShow} className="item1"></div>
+        <img className="game-char" src={wormwoods}></img>
+        <div className="game-riddle">I am orange but not an orange.</div>
 
         <Modal
           show={show}
@@ -33,16 +34,16 @@ function Level1() {
             <Modal.Title>You Found It!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            See if you can find the next one. :3
+            See if you can find the next one.
           </Modal.Body>
           <Modal.Footer>
             <Button variant='secondary' onClick={handleClose}>Close</Button>
-            <Button varient='primary' href='/level2'>Next Level</Button>
+            <Button varient='secondary' href='/level2'>Next Map</Button>
           </Modal.Footer>
 
         </Modal>
 
-        <Button variant="primary" href='/game'>Select Level</Button>
+        <Button className="map-button" variant="secondary" href='/game'>Select Map</Button>
     </>
     
     

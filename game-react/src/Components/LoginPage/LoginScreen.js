@@ -12,7 +12,7 @@ export const SubmittedNameContext = createContext()
 
 function LoginScreen() {
 
-  // Initiating and setting the set of different "variables"
+  // Initiating and setting the state of different "variables"
   const [name, setName] = useState('')
   const [submittedName, setSubmittedName] = useState('')
   const [show, setShow] = useState(true)

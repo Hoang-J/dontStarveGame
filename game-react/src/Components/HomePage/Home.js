@@ -11,10 +11,7 @@ function Home() {
         <img className="chester" src={chester} alt=''></img>
         <p className="art-credit">Disclaimer: All artwork are from Klei Entertainment's Don't Starve. Support their game <a className="art-credit-link" href="https://www.klei.com/games/dont-starve">here!</a></p>
       </div>
-      
     </>
-    
-    
   )
 }
 

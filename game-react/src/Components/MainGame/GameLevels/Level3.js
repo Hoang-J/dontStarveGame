@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 import './Levels.css'
-import ModalBody from 'react-bootstrap/esm/ModalBody';
+import ModalBody from 'react-bootstrap/esm/ModalBody'
+import willow from '../../../Images/willow-animation.gif'
 
 function Level3() {
 
@@ -18,9 +19,11 @@ function Level3() {
 
   return (
     <>
-      <div>Level 3</div>
       <div className="snowy-trees"></div>
       <div className="item3" onClick={handleShow}></div>
+      <img className="game-char" src={willow}></img>
+      <div className="game-riddle">I'm naked but not the drink.</div>
+      
 
       <Modal
       show={show}
@@ -32,14 +35,14 @@ function Level3() {
           <Modal.Title>Very Nice!</Modal.Title>
         </Modal.Header>
         <ModalBody>
-          I can't believe you got it! Onto the next 
+          I can't believe you got it! Onto the next.
         </ModalBody>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary" href='/level4'>Next Level</Button>
+          <Button variant="secondary" href='/level4'>Next Map</Button>
         </Modal.Footer>
       </Modal>
-      <Button variant="primary" href='/game'>Select Level</Button>
+      <Button className="map-button" variant="secondary" href='/game'>Select Level</Button>
     </>
     
   )

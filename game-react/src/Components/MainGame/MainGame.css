@@ -1,36 +1,44 @@
-/* html {
-    background-image: url(../Images/field-biome.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
-} */
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* .field {
-    margin-top: 1.4%;
-    border: 2px solid red;
-    width: 99.8%;
-    height: 500px;
-    background-image: url(../Images/field-biome.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
-    
+/* the frame in the background */
+.main { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.item {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 3%;
-    height: 30px;
-    position: relative;
-    left: 100px;
-    bottom: 300px;
-    color: aliceblue;
+.game-title {
+    position: absolute;
+    top: 25%;
+    align-content: center;
+    text-align: center;
+    /* margin-top: 5%; */
+    /* border: 2px solid rebeccapurple; */
+    width: 60%;
+    height: 20%;
+    /* color: rgba(0, 0, 0, 0.788); */
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 80px;
+    font-family: "Fredericka the Great", serif;
+}
 
+.game-description {
+    position: absolute;
+    top: 45%;
+    align-content: center;
+    text-align: center;
+    width: 70%;
+    height: 20%;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: "Fredericka the Great", serif
+}
 
-    
-} */
-
-@import 'bootstrap/dist/css/bootstrap.min.css';
+.dropdown {
+    position: absolute;
+    left: 46%;
+    top: 67%;
+}
