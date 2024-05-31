@@ -1,6 +1,9 @@
 import React, { useContext, createContext, useState } from 'react'
 import { NameContext, SubmittedNameContext } from './LoginScreen'
+import Button from 'react-bootstrap/Button'
 import GreetExit from './GreetExit'
+import './Login.css'
+import beefalo from '../../Images/beefalo-carrat.gif'
 
 // exporting this context because the grandchild component will render based on this state
 export const isFormUpContext = createContext()
@@ -36,31 +39,31 @@ function LogIn() {
 
   return (
     <>
+        <img className="login-char" src={beefalo}></img>
         {/* will show the context from the parent component */}
-        <div>Logged In: {submittedName}</div>
+        <div className="log-status">Logged In: {submittedName}</div>
         
         {/* conditional rendering to hide the form once user clicks continue to load the grandchild component */}
         {isFormUp && 
           <>
-          <p>Please confirm your name:</p>
-          <form onSubmit={handleSubmit}>
-          <label>Name: </label>
-          <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleInputChange}
-          required
-          />
-          
-          <button type="submit">Confirm</button>
-          <button onClick={clearInput}>Clear</button>
-          </form>
-          
-          <button onClick={hideInput}>Continue</button>
+          <div className='form-section'>
+            <p>Please confirm your name:</p>
+            <form onSubmit={handleSubmit}>
+              <label>Name: </label>
+              <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleInputChange}
+              required
+              />
+              <Button className="form-button" type="submit" variant="secondary" size="lg">Confirm Change</Button>
+              <Button className="form-button" variant='secondary' size="lg" onClick={clearInput}>Clear</Button>
+            </form>
+              <Button className="continue-button" variant='secondary' size="lg" onClick={hideInput}>Continue</Button>
+          </div>
           </>
         }
-        
         {/* providing the isFormUp state and its setter to the grandchild component */}
         <isFormUpContext.Provider value={[isFormUp, setIsFormUp]}>
           <GreetExit />

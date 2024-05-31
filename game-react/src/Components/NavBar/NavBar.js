@@ -13,6 +13,7 @@ function NavBar() {
     <>
       <Navbar bg="secondary" data-bs-theme="dark">
         <Container>
+        {/* the dont starve logo for the brand picture */}
           <img className="nav-logo" src={logo} alt=''></img>
           <Nav className="me-auto">
             <Button variant="secondary"><NavLink className="link-line" to="/home">Home</NavLink></Button>
@@ -22,6 +23,7 @@ function NavBar() {
             <Button variant="secondary"><NavLink className="link-line" to="/shop">Shop</NavLink></Button>
           </Nav>
           <Navbar.Toggle />
+          {/* puts the log in button all the way to the right of the nav bar */}
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
               <Button variant="secondary"><NavLink className="link-line" to="/login">Log In</NavLink></Button>

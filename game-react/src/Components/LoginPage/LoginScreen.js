@@ -1,6 +1,7 @@
 import React, { useState, createContext } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import LogIn from './LogIn'
+import './Login.css'
 
 // Creating context to send the inputted name from user to pass onto the child component for it to use it
 // Didn't do it for this app but can pass it onto grandchild component for it to access if wanted to
@@ -47,7 +48,10 @@ function LoginScreen() {
   }
 
   return (
-    <>
+    <>  <div className="login-background"></div>
+        <div className="modal-boxes">
+
+        
         {/* Modal for user to input their name of choice */}
         <Modal
         show={show}
@@ -76,7 +80,6 @@ function LoginScreen() {
           onChange={handleInputChange}
           required
           >
-
           </input> 
 
         {/* I put the footer inside the body to separate the buttons from the form box */}
@@ -84,7 +87,6 @@ function LoginScreen() {
           <button type="submit" onClick={handleClose}>Confirm</button>
           <button onClick={clearInput}>Clear</button>
         </Modal.Footer>
-
           </form>
         </Modal.Body>
 
@@ -101,7 +103,7 @@ function LoginScreen() {
       </SubmittedNameContext.Provider>
       
       }
-
+    </div>
     </>
 
   )

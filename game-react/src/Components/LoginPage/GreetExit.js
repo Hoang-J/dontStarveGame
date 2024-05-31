@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { SubmittedNameContext } from './LoginScreen'
 import { isFormUpContext } from './LogIn'
 import { useHistory } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
 import TypeWriter from '../TypeWriter'
 
 function GreetExit() {
@@ -23,19 +24,19 @@ function GreetExit() {
     
   return (
     <>
-        <div>
+        <div className="greeting">
           {/* conditional rendering set up here where the input form from the child component has to go away first and then this grandchild component will appear */}
             {!isFormUp && (
             <div>
             {/* These texts are show in a typewriter effect */}
             {/* The context from the parent element was passed down to be used here as well */}
-              <h2>Welcome <TypeWriter text={submittedName}/></h2>
-              <TypeWriter text={"Hope you enjoy your visit to this Don't Starve website."}/>
+              <h1>Welcome <TypeWriter text={submittedName}/></h1>
+              <h4><TypeWriter text={"Hope you enjoy your visit to this Don't Starve website."}/></h4>
               
             </div>
             )}
             {/* when user clicks on this button, will return user back to the home page which is done by the useHistory hook */}
-          <button onClick={loggingOff}>Log Off</button>
+          <Button className="log-off-button" variant="secondary" size="lg" onClick={loggingOff}>Log Off</Button>
         
         </div>
         

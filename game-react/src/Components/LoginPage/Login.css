@@ -1,0 +1,91 @@
+/* the background */
+.login-background { 
+    position: absolute;
+    width: 100%;
+    height: 92.1%;
+    background-image: url(../../Images/orange-background.jpeg);
+    background-repeat: no-repeat;
+    /* this makes it so that the background doesn't follow when the screen is scrolled */
+    background-attachment: fixed;
+    background-position: center;
+    /* vh is viewport height which adjusts accordinly to when the window is resized */
+    background-size: 202vh 100vh;
+}
+
+.modal-boxes {
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    height: 60%;
+    border: 2px solid #6c757d;
+    background-color: #6c757d96;
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* padding-left: 2%; */
+    margin-top: 3%;
+    margin-left: 10%;
+
+}
+
+.log-status {
+    position: absolute;
+    top: 5%;
+    padding-left: 3%;
+    font-size: 24px;
+}
+
+.form-section {
+    position: absolute;
+    top: 20%;
+    padding-left: 3%;
+    width: 100%;
+}
+
+/* styling the textbox of the input */
+input[type=text]:focus {
+    background-color: rgb(156, 156, 156);
+  }
+
+.form-button {
+    font-size: 30px;
+    margin: 1%
+}
+
+.continue-button {
+    position: absolute;
+    top: 200%;
+    left: 35%;
+    width: 30%;
+    font-size: 30px;
+    
+}
+
+.greeting {
+    position: absolute;
+    top: 35%;
+    padding-left: 20%;
+    /* width: 100%; */
+    height: 20%;
+
+}
+
+.log-off-button {
+    position: absolute;
+    top: 224.5%;
+    left: 15%;
+    width: 30%;
+    font-size: 30px;
+}
+
+.login-char {
+    position: absolute;
+    left: 71%;
+    top: 23%;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+}
