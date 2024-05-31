@@ -1,18 +1,9 @@
 
-.body {
-    background-image: url("../../MapBackgrounds/green-curtain.jpeg");
-}
-
 .Recipe-List {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
-    
-}
-
-.food-cards {
-
     
 }
 

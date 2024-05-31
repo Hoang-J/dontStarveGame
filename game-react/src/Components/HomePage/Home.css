@@ -1,0 +1,71 @@
+/* Importing font from google */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+/* the frame in the background */
+.main { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 92.6%;
+    background-image: url(../../Images/dont-starve-border.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 202vh 100vh;
+}
+
+.home-title {
+    align-content: center;
+    text-align: center;
+    /* margin-top: 8%; */
+    border: 2px solid rebeccapurple;
+    width: 40%;
+    height: 20%;
+    color: rgba(0, 0, 0, 0.788);
+    font-weight: 600;
+    font-size: 80px;
+    font-family: "Fredericka the Great", serif;
+}
+
+.home-description {
+    align-content: center;
+    text-align: center;
+    /* margin-top: 8%; */
+    border: 2px solid rebeccapurple;
+    width: 40%;
+    height: 20%;
+    color: rgba(0, 0, 0, 0.788);
+    font-weight: 600;
+    font-size: 80px;
+    font-family: "Fredericka the Great", ser
+}
+
+/* chester gif to resize, crop, and apply animation to */
+.chester {
+    position: absolute;
+    width: 15%;
+    height: 30%;
+    /* Crop gif into a circle to get rid of some white space */
+    clip-path: circle(40%);
+    bottom: 15%;
+    left: 7.5%;
+    animation: backAndForth 14s linear infinite;
+}
+
+
+@keyframes backAndForth {
+    0% {
+    transform: translateX(-2%) rotateY(0deg);
+    }
+    49% {
+    transform: translateX(450%) rotateY(0deg);
+    }
+    50% {
+    transform: translateX(450%) rotateY(180deg);
+    }
+    100% {
+    transform: translateX(-2%) rotateY(180deg);
+    }
+  }
