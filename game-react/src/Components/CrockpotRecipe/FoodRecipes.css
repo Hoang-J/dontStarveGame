@@ -1,18 +1,40 @@
+/* the frame in the background */
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 92.6%;
+    background-image: url(../../Images/dont-starve-border.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* vh is viewport height, using this helps the image stay the same size even when window is resized */
+    background-size: 202vh 100vh;
+}
 
 .Recipe-List {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    list-style-type: none;
-    
+    text-align: center;
+
 }
 
+/* changing the size of the food images */
 .food-item {
-    padding-left: 30%;
-    width: 70%;   
-    height: 70%;
+    width: 30%;   
+    height: 58%;
 }
 
+/* making the food name and type in the center */
 .food-descriptions {
     text-align: center;
 }

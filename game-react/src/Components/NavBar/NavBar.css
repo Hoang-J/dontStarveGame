@@ -2,4 +2,11 @@
 
 .link-line {
     text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.nav-logo {
+    width: 4%;
+    height: 4%;
+    margin-right: 1.5%;
 }
