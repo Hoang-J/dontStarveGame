@@ -8,7 +8,7 @@ function Characters() {
   const [charList, setCharList] = useState([])
 
   useEffect(() => {
-    fetch('https://dont-starve-together-api.xyz/api/survivors')
+    fetch('https://dont-starve-backend.vercel.app/survivors')
     .then(response => (response.json()))
     .then(data => {
       // Updating the char list state with the data to make the data
@@ -31,7 +31,7 @@ function Characters() {
           <div className="char-card" key={char.id}>
             <img src={char.portrait}/>
             <p>
-              <b>{char.nickname}</b>
+              {/* <b>{char.nickname}</b> */}
               <p>{char.name}</p>
             </p>
           </div>
