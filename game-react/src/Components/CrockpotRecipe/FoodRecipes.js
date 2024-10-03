@@ -8,7 +8,7 @@ function FoodRecipes() {
   const [recipeList, setRecipeList] = useState([]);
   
   useEffect(() => {
-    fetch("https://dont-starve-together-api.xyz/api/crockpot-recipes?page=4")
+    fetch("https://dont-starve-backend.vercel.app/recipes")
       .then((response) => response.json())
       .then((data) => {
         // Updating the recipe list state with the data to make the data

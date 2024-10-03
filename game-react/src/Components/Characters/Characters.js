@@ -27,11 +27,12 @@ function Characters() {
       {/* Mapping through the API array to get each character's name, nickname, and portrait
       The image for the last survivor wasn't working so had to use slice to return back only 18 survivors (19 total characters)
       Slice is using index values that's why its 0-17 */}
-        {charList.slice(0, 17).map(char => 
+        {charList.map(char => 
           <div className="char-card" key={char.id}>
-            <img src={char.portrait}/>
+            
+            <img src={"https://cdn.forums.klei.com/monthly_2019_04/Willow_DST.png.745f49fc24051caafd4805c1f2c15dbc.png"}/>
             <p>
-              {/* <b>{char.nickname}</b> */}
+              <b>{char.nickname}</b>
               <p>{char.name}</p>
             </p>
           </div>
